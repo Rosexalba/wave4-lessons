@@ -3,7 +3,9 @@
 
   ## Classes to watch:
   <> Wave 4 - intro HTML Basics - Part 1
+  <br>
   <> Wave 4 - intro HTML Basics - Part 2
+  <br>
   <> Wave 4 - intro CCS Basics - Part 1
 
   ## Homework Submissions:
