@@ -14,7 +14,7 @@ By completing this project, you'll learn:
 
 ---
 
- ### 🧱 Tags Introduced
+ ## 🧱 Tags Introduced
 
 Tag	Purpose
 
@@ -50,3 +50,7 @@ Created by Jocelin.S
 Remember: Every opening tag should have a closing tag (<p> ... </p>)
 Use indentation to keep your code organized
 Save your file as index.html and open it in a browser to preview
+
+
+
+# project 1 : notes
