@@ -6,4 +6,4 @@ Use the following tags:
 - < section>	A logical group of related content
 - < article>	A self-contained piece of content
 - < aside>	Extra info, side notes, quotes, etc.
-- < footer>	Page footer with copyright/info
+- < footer>	Page footer with copyright/info xx
