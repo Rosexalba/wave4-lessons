@@ -1,6 +1,6 @@
  # Project 1: My First Webpage
 - create website using
-- <!Doctype>
+- < !Doctype>
 - < html>
 - < head>
 - < title>
