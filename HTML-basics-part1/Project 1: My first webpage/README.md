@@ -16,16 +16,18 @@ By completing this project, you'll learn:
 
  ### 🧱 Tags Introduced
 
-|Tag	|Purpose
-|----------------------------------------------------
-|<!DOCTYPE>	|Tells the browser this is an HTML5 document
-|<html>	    |The root element that wraps everything
-|<head>	    |Contains metadata like the page title
-|<title>    |	Sets the text shown in the browser tab
-|<body>	    |Contains all visible content on the page
-|<h1>	    |Adds a large heading
-|<p>	    |Creates a paragraph
-|<strong>	| Makes text bold
+Tag	Purpose
+
+- <!DOCTYPE>	Tells the browser this is an HTML5 document
+- <html>	The root element that wraps everything
+- <head>	Contains metadata like the page title
+- <title>	Sets the text shown in the browser tab
+- <body>	Contains all visible content on the page
+- <h1>	Adds a large heading
+- <p>	Creates a paragraph
+- <strong>	Makes text bold
+
+---
 
 ## 🎯 Your Goal
 You will create a webpage that:
@@ -33,13 +35,18 @@ You will create a webpage that:
 - Greets the visitor with a heading
 - Includes a short paragraph about you
 - Mentions your name and makes it bold
+
+---
+
 ## 💡 Example Output
 When done, your webpage might look something like this:
 
 Welcome to My First Webpage!
 I am learning how to build websites using HTML.
 Created by Jocelin.S
+
+----
 ## 📝 Tips
-- Remember: Every opening tag should have a closing tag (<p> ... </p>)
-- Use indentation to keep your code organized
-- Save your file as index.html and open it in a browser to preview
+Remember: Every opening tag should have a closing tag (<p> ... </p>)
+Use indentation to keep your code organized
+Save your file as index.html and open it in a browser to preview
