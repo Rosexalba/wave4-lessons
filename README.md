@@ -1,12 +1,9 @@
 # Wave 4 lessons 
-- option 1: Catch up and Dominate.
-
-  ## Classes to watch:
-  <> Wave 4 - intro HTML Basics - Part 1 & 2
-  <br>
-  <> Wave 4 - intro CCS Basics - Part 1
-  <br>
-  <> Wave 4 - JS-Fundamentals - Part 1, 2, 3
+- CSS Intro
+- HTML Intro
+- JavaScript Fundamentals
+- Homework
+- Level 1 Final Project
 
 
   ## Homework Submissions:
