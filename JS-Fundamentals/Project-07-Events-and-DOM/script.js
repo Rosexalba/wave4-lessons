@@ -17,46 +17,50 @@ console.log({primaryButton,
 
 
 
-function showPrimaryMessage() {
+const showPrimaryMessage = () => {
     const message = document.getElementById("message");
 
     message.innerText = "Primary button clicked!";
     message.classList.add("highlight");
 
+    console.log("Primary button message");
+
 }
 
-console.log("Primary button message");
 
 
 
-function showSecondaryMessage() {
+const showSecondaryMessage = () => {
     const message2 = document.getElementById("message2");
 
     message2.innerText = "Secondary button clicked!"
     message2.classList.toggle("highlight");
 
+    console.log("Secondary button message");
+
 }
 
-console.log("Secondary button message");
 
 
-function dangerAlert(){
+
+const dangerAlert = () => {
     alert("Danger button pressed!");
+    console.log("Button Alert message");
 }
 
-console.log("Button Alert message");
 
-
-function countListItems() {
+const countListItems = () => {
     const listItems = document.getElementsByTagName("li");
 }
 
-console.log(listItems.length);
+ console.log(listItems.length);
+
+
+
 
 primaryButton.addEventListener("click", showPrimaryMessage);
-primaryButton.addEventListener("click", showSecondaryMessage);
-primaryButton.addEventListener("click", dangerAlert);
-
+// secondaryButton.addEventListener("click", showSecondaryMessage);
+dangerButton.addEventListener("click", dangerAlert);
 
 
 
