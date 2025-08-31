@@ -4,10 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Events & DOM</title>
+    <style>
+        .highlight {
+            font-weight: bold;
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    <h1>Project 07 Events & DOM</h1>
+    <h1 id="title">Heading</h1>
     <p> Open the browser console to see your Javascript in action</p>
+    <button onclick="showPrimaryMessage()">Primary button (querySelector)</button>
+    <button id="btnById" onclick="showSecondaryMessage()">Secondary button (getElementById)</button>
+    <button class="btnByClass" onclick="dangerAlert()">Danger Button (getElementByClassName)</button>
+
+    <p id="message">Waiting for Primary button click</p>
+    <p id="message2">Waiting for Secondary button click</p>
+
+    <ul>
+        <li>Item one</li>
+        <li>Item two</li>
+    </ul>
     <script src="script.js"></script>
 </body>
 </html>
