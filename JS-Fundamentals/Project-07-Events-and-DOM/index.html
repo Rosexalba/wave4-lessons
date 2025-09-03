@@ -9,22 +9,46 @@
             font-weight: bold;
             color: red;
         }
+
+        .pink {
+            font-weight: bold;
+            color: pink;
+        }
+
+        .green {
+            font-weight: bold;
+            color: rgb(111, 185, 111);
+        }
     </style>
 </head>
 <body>
     <h1 id="title">Heading</h1>
     <p> Open the browser console to see your Javascript in action</p>
+    <!-- INLINE HTML -->
+     <!-- GOOD FOR SMALL DEMOS BUT MESSY IN MIXING JS AND HTML WITH BIG PROJECTS -->
     <button onclick="showPrimaryMessage()">Primary button (querySelector)</button>
     <button id="btnById" onclick="showSecondaryMessage()">Secondary button (getElementById)</button>
     <button class="btnByClass" onclick="dangerAlert()">Danger Button (getElementByClassName)</button>
+    <br>
+    <br>
 
+    <button class="btn3">
+        <br> Button 3 <br> <br>
+    </button>
+    <br>    
+    <button class="btn4">Button 4</button>
+    <br>
+     
     <p id="message">Waiting for Primary button click</p>
     <p id="message2">Waiting for Secondary button click</p>
 
+    <p id="message3">Click button 3 to see my favorite color!</p>
+    <p id="message4">Click button 4 to see a message</p>
+<!-- 
     <ul>
         <li>Item one</li>
         <li>Item two</li>
-    </ul>
+    </ul> -->
     <script src="script.js"></script>
 </body>
 </html>

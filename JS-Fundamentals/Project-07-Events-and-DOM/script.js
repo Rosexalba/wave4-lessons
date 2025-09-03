@@ -7,6 +7,8 @@ const message2 = document.getElementById("message2");
 const listItems = document.getElementsByTagName("li");
 const allButtonsNL = document.querySelectorAll("button");
 
+
+
 console.log({primaryButton, 
     secondaryButton, 
     dangerButton, 
@@ -49,11 +51,11 @@ const dangerAlert = () => {
 const countListItems = () => {
     console.log(`you have ${listItems.length} list itmes` );
 }
-countListItems();
+countListItems(); // call function
 
 
 primaryButton.addEventListener("click", showPrimaryMessage);
-secondaryButton.addEventListener("click", showSecondaryMessage);
+// secondaryButton.addEventListener("click", showSecondaryMessage);
 dangerButton.addEventListener("click", dangerAlert);
 
 // Bonus:
@@ -72,6 +74,72 @@ btn.addEventListener("click", countListItems);
 
 };
 
+// EXTRA BUTTONS //
+const btn3 = document.getElementsByClassName("btn3")[0];
+const btn4 = document.getElementsByClassName("btn4")[0];
+const message3 =document.getElementById("message3");
+const message4 =document.getElementById("message4");
+
+
+console.log ({
+    btn3,btn4,message3,message4
+});
+
+const pinkButton = () => {
+
+    message3.innerText = "My favorite color is pink";
+    message3.classList.add("pink");
+
+
+    console.log("Favorite color");
+}
+
+const greenButton = () => {
+
+    message4.innerText = "Just kidding! Green is actually my favorite color.";
+    message4.classList.add("green");
+
+    console.log("Actual favorite color")
+}
+
+
+btn3.addEventListener("click", pinkButton);
+btn4.addEventListener("click", greenButton);
+
+
+// text inside button//
+
+// const btn3 = document.getElementsByClassName("btn3")[0];
+// const btn4 = document.getElementsByClassName("btn4")[0];
+// const message3 =document.getElementById("message3");
+// const message4 =document.getElementById("message4");
+
+
+// console.log ({
+//     btn3,btn4,message3,message4
+// });
+
+// const pinkButton = () => {
+
+//     btn3.innerText = "My favorite color is pink";
+//     btn3.classList.add("pink");
+
+
+//     console.log("Favorite color");
+// }
+
+// const greenButton = () => {
+
+//     btn4.innerText = "Just kidding! Green is actually my favorite color.";
+//     btn4.classList.add("green");
+
+//     console.log("Actual favorite color")
+// }
+
+
+
+// btn3.addEventListener("click", pinkButton);
+// btn4.addEventListener("click", greenButton);
 
 
 
