@@ -18,8 +18,6 @@ console.log({primaryButton,
 
 
 const showPrimaryMessage = () => {
-    const message = document.getElementById("message");
-
     message.innerText = "Primary button clicked!";
     message.classList.add("highlight");
 
@@ -31,7 +29,6 @@ const showPrimaryMessage = () => {
 
 
 const showSecondaryMessage = () => {
-    const message2 = document.getElementById("message2");
 
     message2.innerText = "Secondary button clicked!"
     message2.classList.toggle("highlight");
@@ -50,17 +47,34 @@ const dangerAlert = () => {
 
 
 const countListItems = () => {
-    const listItems = document.getElementsByTagName("li");
+    console.log(`you have ${listItems.length} list itmes` );
 }
-
- console.log(listItems.length);
-
-
+countListItems();
 
 
 primaryButton.addEventListener("click", showPrimaryMessage);
-// secondaryButton.addEventListener("click", showSecondaryMessage);
+secondaryButton.addEventListener("click", showSecondaryMessage);
 dangerButton.addEventListener("click", dangerAlert);
+
+// Bonus:
+// ➤ Use a forEach loop on allButtonsNL to:
+//    - log each button’s text when clicked
+//    - run countListItems() every time ANY button is clicked
+// */
+
+
+allButtonsNL.forEach =(btn) => {
+    btn.addEventListener("click", () => {
+    console.log(`${btn.textContent}- log using queryselector`);
+});
+
+btn.addEventListener("click", countListItems);
+
+};
+
+
+
+
 
 
 
