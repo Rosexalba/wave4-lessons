@@ -2,8 +2,7 @@
 // Create an empty array called guestList to store names
 
 const guestList = [];
-
-console.log(guestList);
+console.log(guestList)
 
 // ---------- STEP 2: Select the DOM elements ----------
 // Use getElementById to select:
@@ -16,11 +15,11 @@ console.log(guestList);
 const guestInput = document.getElementById("guestInput");
 const addBtn = document.getElementById("addBtn");
 const removeBtn =  document.getElementById("removeBtn");
-const guestListElement =  document.getElementById("guestList");
+const guestUl =  document.getElementById("guestList");
 const totalCount =  document.getElementById("totalCount");
 
 console.log({
-    guestInput, addBtn, removeBtn, guestListElement, totalCount
+    guestInput, addBtn, removeBtn, guestUl, totalCount
 });
 
 
@@ -36,15 +35,17 @@ console.log({
 
 let renderList = () => {
 
-    guestListElement.innerHTML = "";
+    guestUl.innerHTML = "";
 
-    for(let i = 0; i < guestList.length; i++) {
+    for(let i = 0; i < guestList.length; i++) 
+        
+        {
         let li = document.createElement("li");
         li.innerText = guestList[i];
-        guestListElement.appendChild(li);
+        guestUl.appendChild(li);
     }
 
-    totalCount.innerHTML = "Total Guests:" + guestList.length;
+    totalCount.innerHTML = `Total Guests: ${guestList.length}`;
 };
 
 // ---------- STEP 4: Create a function called handleAdd() ----------
@@ -77,9 +78,9 @@ let handleRemoveLast = () => {
 
     if (guestList.length === 0) {
         alert("No guests to remove");
-        return;
+        return; 
     } 
-    guestList.pop();
+    const removeLast = guestList.pop();
     
     renderList ();
 };
