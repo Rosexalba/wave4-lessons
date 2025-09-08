@@ -9,7 +9,10 @@
 // Log the secret number to the console for testing
 
 const secret = Math.floor(Math.random() * 10) + 1;
-console.log(secret);
+    console.log(secret); 
+
+
+
 
 // ---------- STEP 2: Select DOM elements ----------
 // Use getElementById to grab:
@@ -18,8 +21,9 @@ console.log(secret);
 // - the message paragraph (id="message")
 
 const guessInput = document.getElementById("guessInput");
-const guessBtn = document.getElementById("guessBtn");
-const message = document.getElementById("message");
+const guessBtn = document.getElementById ("guessBtn");
+const message = document.getElementById ("message");
+
 
 // ---------- STEP 3: Add a click event listener to the button ----------
 // Inside the function:
@@ -29,17 +33,23 @@ const message = document.getElementById("message");
 // - If it matches, update message.innerText to say "You win!"
 // - If not, say "Try again."
 
-guessBtn.addEventListener("click", function () {
-  const userGuess = Number(guessInput.value);
-  if (userGuess === secret) {
-    message.innerText = "You win!";
-  } else {
-    message.innerText = "Try again.";
-  }
+guessBtn.addEventListener("click", () => {
+
+    const userGuess = Number(guessInput.value);
+    if (userGuess === secret) {
+        message.innerText = "You win!";
+    } else {
+        message.innerText = "Try again.";
+    }
 });
+    
+
+
 
 // ---------- STEP 4: Try moving the secret number INSIDE the click event function ----------
 // What changes? Does it reset every time?
+// resets everytime
+
 
 // =============================================================
 // BONUS 1: Scope Demo
@@ -47,19 +57,22 @@ guessBtn.addEventListener("click", function () {
 
 // A. Create a global variable and log it
 
-let random = "random words";
-console.log(random);
+let petName = "Zuly";
+console.log(petName);
+
 
 // B. Create a function with a local variable
 // - Log the variable inside the function
 // - Try logging it outside the function (it should cause an error)
 
-function local() {
-  let myName = "Dylan";
-  console.log(myName);
+localVariable = () => {
+    let petName2 = "Chiquita";
+    console.log(petName2);
 }
 
-local();
+localVariable();
+
+
 // =============================================================
 // BONUS 2: Hoisting Demo
 // =============================================================
@@ -69,8 +82,8 @@ local();
 
 hoisting();
 
-function hoisting() {
-  console.log("Hoisting this function");
+function hoisting(){
+    console.log("Hoisting this function");
 }
 
 // B. Try logging a var before it’s declared (should log undefined)
@@ -78,17 +91,6 @@ function hoisting() {
 // C. Try logging a let before it's declared (should cause ReferenceError)
 // - Uncomment the line to test the error
 
-startGame();
 
-function startGame() {
-  showWelcome();
-  setUpBoard();
-}
 
-function showWelcome() {
-  console.log("welcome");
-}
 
-function setUpBoard() {
-  console.log("setting up board");
-}
