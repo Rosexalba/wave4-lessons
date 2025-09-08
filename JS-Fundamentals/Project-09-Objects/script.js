@@ -5,12 +5,12 @@
 // - job
 // - email
 
-const profile = {
+let profile = {
     name: "Rose",
     age: 27,
     job: "Web Developer",
-    email: "webdev@gmail.com",
-};
+    email: "webdev98@gmail.com"
+}
 
 console.log(profile);
 
@@ -19,12 +19,23 @@ console.log(profile);
 // This method should return a string like:
 // "Alice, 30 years old, works as a Web Developer. Contact: alice@example.com"
 
-profile.toString = function() {
-    return `${this.name}, ${this.age} years old, works as a Web Developer. Contact: ${this.email}`
+// ARROW FUNCTION //
+// profile.toString = () => {
+//     return( `${profile.name}, ${profile.age} years old, works as a ${profile.job}. Contact: ${profile.email}`);
+// }
+//                         // arrow function do not have their own this
+// console.log(profile.toString()); 
 
+// TRADITIONAL FUNCTION
+
+profile.toString = function () {
+    return( `${this.name}, ${this.age} years old, works as a ${this.job}. Contact: ${this.email}`);
 }
+                                    // this is dynamic and points to the calling object
+                                    // for object methods Traditional functions are usually preffered
+console.log(profile.toString()); 
 
-console.log(profile.toString());
+
 
 
 
@@ -35,17 +46,20 @@ console.log(profile.toString());
 // 3.3 – Use dataset.key to get the property name
 // 3.4 – Update span.innerText with profile[key]
 
-const renderProfile = () => {
 
-    const spanTags = document.querySelectorAll("span[data-key]");
+// TRADITIONAL FUNCTION
+function renderProfile() {
+   const spanTags = document.querySelectorAll("span[data-key]")
+   spanTags.forEach((span) => {
+       const key = span.dataset.key;
+       span.innerHTML = profile[key];
 
-    spanTags.forEach((span)=> {
-
-        const key = span.dataset.key;
-
-        span.innerText = profile[key];
-    });
+   });
 }
+
+
+
+
 
 // ---------- STEP 4: Create a function called updateEmail() ----------
 // This function should:
@@ -53,26 +67,25 @@ const renderProfile = () => {
 // 4.2 – If the user enters something, update profile.email
 // 4.3 – Select the span with data-key="email" and update its text
 
-
 const updateEmail = () => {
-
-    const newEmail = prompt("Enter new email")
-
+    const newEmail = prompt("Enter new email");
     if (newEmail) {
         profile.email = newEmail;
 
-        const emailSpan = document.querySelector(`span[data-key="email"]`);
-        if(emailSpan) {
-            emailSpan.innerText = profile.email;
-        }
+    const emailSpan = document.querySelector(`span[data-key = "email"]`);   
+    if(emailSpan) {
+        emailSpan.innerHTML = profile.email;
     }
- 
+    }
 };
+
 
 // ---------- STEP 5: Log the profile summary when the page loads ----------
 // Use console.log() and call profile.toString()
 
+
 console.log(profile.toString());
+
 
 
 // ---------- STEP 6: Add an event listener for the update button ----------
@@ -80,8 +93,9 @@ console.log(profile.toString());
 // 6.2 – Add a "click" listener that calls updateEmail()
 
 const updateBtn = document.getElementById("updateBtn");
-
 updateBtn.addEventListener("click", updateEmail);
+
+
 
 
 
