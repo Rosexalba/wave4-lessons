@@ -1,3 +1,5 @@
+
+
 // ======================================================================
 // PROJECT: TaskTracker Lite — DOM + Events
 // PURPOSE: Connect JavaScript to HTML (DOM) and respond to events.
@@ -11,6 +13,12 @@
 // ======================================================================
 
 // STEP 1: Select elements by id and store in variables
+     const themeBtn = document.getElementById("themeBtn");
+     const addBtn = document.getElementById("addBtn");
+     const taskInput = document.getElementById("taskInput");
+     const taskForm = document.getElementById("taskForm");
+     const taskList = document.getElementById("taskList");
+     const status = document.getElementById("status");
 
 // STEP 2: Add event listeners
 //   - form.submit: preventDefault, validate input, call addTaskItem or setStatus

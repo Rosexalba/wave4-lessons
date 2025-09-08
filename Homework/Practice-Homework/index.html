@@ -2,10 +2,36 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Mentee</title>
+    <title>Task Tracker Homework</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css"/>
   </head>
+
   <body>
-    <!-- ======================================================================
+
+    <header class="header">
+      <h1>Task Tracker</h1>
+      <button id="themeBtn" type="button" aria-pressed="false">Toggle Theme</button>
+    </header>
+
+    <main class="container">
+      <form id="taskForm">
+        <input id="taskInput" type="text">
+        <button id="addBtn" type="submit"><span>Add</span></button>
+      </form>
+      <p id="status" aria-live="polite"></p>
+      <ul id="tasklist"></ul>
+    </main>
+
+     <script src="script.js"></script>
+
+  </body>
+</html>
+<!-- ======================================================================
   PROJECT: TaskTracker Lite — DOM + Events 
   PURPOSE: Build a task list to practice HTML, CSS, and JS with DOM + Events.
 
@@ -33,5 +59,3 @@
 
     <!-- STEP 3 (CONNECT JS):
      - Add <script src="script.js"></script> before </body> -->
-  </body>
-</html>
