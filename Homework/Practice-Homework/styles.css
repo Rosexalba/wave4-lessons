@@ -32,7 +32,7 @@
 
 :root {
   --bg-color: #ffe6f0;
-  --text-color: #5c2a4d, -webkit-text-stroke:.2px #fff0f6;
+  --text-color: #5c2a4d,;
   --button-bg:#ffb3d9;
   --accent:#fff0f6;
   --main-font:"Delius", cursive; 
@@ -121,7 +121,10 @@ body.dark {
 
 #status {
   font-family: var(--main-font);
-  color: red;
+  font-weight: bold;
+  font-style: italic;
+  color: rgb(241, 117, 241);
+  
 }
 
 #taskList {

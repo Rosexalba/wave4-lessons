@@ -47,7 +47,12 @@ form.addEventListener("submit", (e) => {
     addTaskItem(text); // add task to list
     input.value = ""; // clear input box
     setStatus("Task Added! <3 "); // feedback message
-})
+});
+
+themeBtn.addEventListener("click", () => {
+    document.body.classList.toggle("dark"); //adds or removes "dark" from HTML <body> 
+});
+
 
 
 
