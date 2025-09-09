@@ -13,16 +13,43 @@
 // ======================================================================
 
 // STEP 1: Select elements by id and store in variables
+     const form = document.getElementById("taskForm");
+     const input = document.getElementById("taskInput");
+     const statusEl = document.getElementById("status");
+     const list = document.getElementById("taskList");
      const themeBtn = document.getElementById("themeBtn");
-     const addBtn = document.getElementById("addBtn");
-     const taskInput = document.getElementById("taskInput");
-     const taskForm = document.getElementById("taskForm");
-     const taskList = document.getElementById("taskList");
-     const status = document.getElementById("status");
 
 // STEP 2: Add event listeners
 //   - form.submit: preventDefault, validate input, call addTaskItem or setStatus
 //   - themeBtn.click: toggle body.dark and aria-pressed
+
+const setStatus = (message) => {         // updates the StatusEL element  with whatever message you pass
+    statusEl.textContent = message;      // for user feedback message
+}
+
+const addTaskItem = (text) => {
+    const li = document.createElement("li"); // create a new <li> element
+    li.textContent = text;         // put the task test inside
+    li.classList.add("task-item"); // add a class for styling
+    list.appendChild(li);      // add it to the <ul> in the DOM
+}
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();    // stop page reload
+
+    const text = input.value.trim(); // get clean input trim white space
+
+    if(!text) { //! validate input
+        setStatus("Please Enter Task..");   //feedback message
+        return; // stop if input is empty
+    }
+
+    addTaskItem(text); // add task to list
+    input.value = ""; // clear input box
+    setStatus("Task Added! <3 "); // feedback message
+})
+
+
 
 // STEP 3: Function addTaskItem(text)
 //   - Create li.task-item
