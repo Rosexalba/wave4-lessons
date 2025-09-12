@@ -91,6 +91,19 @@ function hoisting(){
 // C. Try logging a let before it's declared (should cause ReferenceError)
 // - Uncomment the line to test the error
 
+startGame();
+
+function startGame() {
+    showWelcome();
+    setUpBoard();
+
+}
 
 
+function showWelcome() {
+    console.log("welcome");
+}
 
+function setUpBoard() {
+    console.log("setting up board");
+}
