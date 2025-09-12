@@ -98,6 +98,7 @@ body.dark {
   cursor: pointer;
   font-style: italic;
   font-size: 15px;
+  transition: background 0.3s;
  
 }
 
@@ -139,11 +140,11 @@ body.dark {
 }
 
 .task-item {
-  font-size: 20px;
+  /* font-size: 20px;
   font-family: var(--main-font);
   text-align: center;
   background-color: var(--bg-color);
-  color: var(--text-color); -webkit-text-stroke: .1px black;
+  color: var(--text-color); -webkit-text-stroke: .1px black; */
 
 }
 
@@ -157,7 +158,7 @@ body.dark {
 }
 
 .done {
-
+ 
 
 
 }
