@@ -11,12 +11,16 @@
     <title>Save Username</title>
 
     <!-- ✅ STEP 4: Link to external CSS for layout and styling -->
-    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <!-- ✅ STEP 5: Create a container to wrap the app UI
        - This keeps the layout organized and centers content
        - The class "container" is referenced for styling if needed -->
+       <div class="container" style="background-color: rgb(243, 232, 218);">
+        <input id="nameInput" type="text" placeholder="enter your name">
+        <button id="saveBtn">Save to localStorage</button>
+        <p id="userDisplay"></p>
+       </div>
 
     <!-- ✅ STEP 6: Add a text input where the user will type their name
          - <input> lets the user type something
