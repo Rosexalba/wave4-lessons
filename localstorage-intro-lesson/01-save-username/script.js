@@ -1,3 +1,5 @@
+// This project causes your saved name to load on the page. so when you refresh the page the name sticks to the page and is on the page
+
 // 🧠 STEP 1: SELECT ELEMENTS FROM THE PAGE
 // Use document.getElementById() to select:
 // - the text input where the user types their name (id="nameInput")
