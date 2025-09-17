@@ -3,7 +3,6 @@
 // - An input where the user types their favorite color (id="colorInput")
 // - A button the user clicks to save the color (id="saveColorBtn")
 // - A display area where the color will be shown (id="colorDisplay")
-
 const colorInput = document.getElementById("colorInput");
 const saveColorBtn = document.getElementById("saveColorBtn");
 const colorDisplay = document.getElementById("colorDisplay");
@@ -14,11 +13,13 @@ const colorDisplay = document.getElementById("colorDisplay");
 // - Set the display text to that color
 // - Optionally change the text color to match for visual feedback
 
-const savedColor = localStorage.getItem("favoriteColor");
-if (savedColor) {
-  colorDisplay.textContent = savedColor;
-  colorDisplay.style.color = savedColor;
-}
+const savedColor = localStorage.getItem("favoriteColor");   // checks for previously saved colors
+  if (savedColor) {                                        // only runs the next code if there is a saved color
+    colorDisplay.textContent = savedColor;                 //  update display text
+    colorDisplay.style.color = savedColor;                //change the test color (using CSS styling inside JS)
+  }
+
+
 
 // 🎯 STEP 3: SAVE COLOR WHEN BUTTON IS CLICKED
 // Add a click event listener to the "Save Color" button.
@@ -27,9 +28,14 @@ if (savedColor) {
 // - Save it using localStorage.setItem("favoriteColor", value)
 // - Update the display area with the color and style.
 
-saveColorBtn.addEventListener("click", () => {
-  const favColor = colorInput.value;
-  localStorage.setItem("favoriteColor", favColor);
-  colorDisplay.textContent = favColor;
-  colorDisplay.style.color = favColor;
-});
+saveColorBtn.addEventListener("click", () => {      // add event listener with clickable button to run code when clicked
+  const favColor = colorInput.value;                // grab what the user typed
+  localStorage.setItem("favoriteColor", favColor);  // save it to localStorage
+  colorDisplay.textContent = favColor;              // update display text 
+  colorDisplay.style.color = favColor;              // change the text color (using CSS styling inside JS)
+})
+
+
+// ** How is the color able to change when input?? **
+// .style.color corresponds to the CSS color property
+// whatever string you assgin here becomes the color of that element
