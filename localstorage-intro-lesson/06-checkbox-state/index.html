@@ -13,26 +13,36 @@
      - Set its type="checkbox"
      - Add aria-pressed="false" for accessibility
      - Put text like "Subscribe to updates" next to it -->
-    <label for="subscribeCheckbox">
+     <label for="subscribeCheckbox">
+
       <input
-        type="checkbox"
-        id="subscribeCheckbox"
-        aria-pressed="false"
-      />Subscribe to updates
-    </label>
+      type="checkbox"
+      id="subscribeCheckbox"/>
+      <!-- aria-pressed="false"/> -->
+
+      Subscribe to updates
+      
+     </label>
+
+     <p id="statusText"
+      aria-live="polite"></p>
+      Not Subscribed</p>
 
     <!-- STEP B: Add a <p> element below the checkbox
      - Give it the id="statusText"
      - Add aria-live="polite" so it updates for screen readers
      - Set default text to "Not subscribed" -->
-    <p id="statusText" aria-live="polite">Not Subscribed</p>
+    <button id="resetBtn"
+    type="button">
+    Reset the saved state
+  </button>
 
     <!-- STEP C: Add a button to reset the saved state
      - Use <button>
      - Give it the id="resetBtn"
      - Set type="button"
      - Inside the button, write text like "Reset saved state" -->
-    <button id="resetBtn" type="button">Reset saved state</button>
+   
 
     <!-- STEP D: At the bottom of <body>, link your script file:
      <script src="script.js"></script> -->
